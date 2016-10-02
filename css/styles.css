@@ -36,18 +36,18 @@
   padding-top: 4em;
   padding-bottom: 4em;
 }
+.p-x-0{
+  padding-left: 0;
+  padding-right: 0;
+}
 /*buttons not rounded*/
 .btn-group button.btn, .btn-group a.btn, .no-round{
   border-radius: 0;
 }
+/*section header color*/
 .sections-color{
   color: #938c8c;
 }
-
-.smooth-scroll{
-
-}
-
 
 /*========== Navigation  ==========*/
 .navbar{
@@ -92,17 +92,42 @@
 
 
 /*========== about  ==========*/
-
-
+.about{
+  
+}
+.concept{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#concept-about{
+  color: #e0a25c;
+  /*text-shadow: 1px 1px 4px #000000;*/
+}
+#concept-about ~ p{
+  /*color: #efad70;*/
+}
+#concept-tools{
+  color: #6baff1;
+  /*text-shadow: 1px 1px 4px #000000;*/
+}
+#concept-tools ~ p {
+  /*color: #5493d1;*/
+}
+#concept-articles{
+  color: #eb8c35;
+  /*text-shadow: 1px 1px 4px #000000;*/
+}
 
 /*========== languages  ==========*/
-.col-xs-12 .thumbnail .caption-fluid{
+.col-xs-10 .thumbnail .caption-fluid{
   height: 135px;
   overflow: auto;
 }
 .languages{
   display: block;
   position: relative;
+
 }
 .languages::after {
   content: "";
@@ -137,8 +162,34 @@ span.label{
 
 
 /*========== media query  ==========*/
-@media(max-width: 768px) {
-  .concept:nth-child(even){
-    background-color: #ccc;
+@media(min-width: 768px) {
+  .concept{
+    height: 234px;
+  }
+  .concept h3{
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
+  .concept .list-group .list-group-item{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+@media(min-width: 992px) {
+  .concept{
+    height: 303px;
+  }
+  .concept h3{
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .concept .list-group .list-group-item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+@media(min-width: 1200px) {
+  .concept{
+    height: 365px;
   }
 }
