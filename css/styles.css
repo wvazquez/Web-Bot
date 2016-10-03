@@ -14,6 +14,9 @@
 .m-b-2{
   margin-bottom: 2em;
 }
+.m-b-4{
+  margin-bottom: 4em;
+}
 .m-t-2{
   margin-top: 2em;
 }
@@ -93,7 +96,7 @@
 
 /*========== about  ==========*/
 .about{
-  
+
 }
 .concept{
   display: flex;
@@ -117,6 +120,9 @@
 #concept-articles{
   color: #eb8c35;
   /*text-shadow: 1px 1px 4px #000000;*/
+}
+article.concept .list-group a{
+  text-transform: capitalize;
 }
 
 /*========== languages  ==========*/
@@ -143,21 +149,22 @@
 }
 
 
+/*========== schedule  ==========*/
+span.label{
+  float: right;
+  font-size: 1em;
+  width: 87px;
+}
+a.list-group-item:hover .list-group-item-text{
+  display: block;
+  padding-top: 0.5em;
+}
+
 /*========== signup footer  ==========*/
 .signup{
   background-color: white;
   border-top: firebrick solid 1px;
   border-bottom: firebrick solid 1px;
-}
-
-
-
-/*========== schedule  ==========*/
-span.label{
-  float: right;
-  font-size: 1em;
-  position: relative;
-  top: 8px;
 }
 
 
@@ -174,6 +181,13 @@ span.label{
     padding-top: 5px;
     padding-bottom: 5px;
   }
+  .list-group-item-text{
+    display: none;
+  }
+  section.signup h5{
+    text-align: left;
+  }
+
 }
 @media(min-width: 992px) {
   .concept{
