@@ -167,6 +167,12 @@ a.list-group-item:hover .list-group-item-text{
   border-bottom: firebrick solid 1px;
 }
 
+/*========== footer  ==========*/
+
+footer div.container .nav li a{
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
 /*========== media query  ==========*/
 @media(min-width: 768px) {
@@ -186,6 +192,10 @@ a.list-group-item:hover .list-group-item-text{
   }
   section.signup h5{
     text-align: left;
+  }
+  footer div.container .nav li a{
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
 }
