@@ -1,0 +1,62 @@
+<!-- =================
+        Modal
+======================-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title text-center" id="myModalLabel">Register</h2>
+      </div>
+      <!-- body -->
+      <div class="modal-body">
+        <form>
+          <h4 class="m-b-2 text-info">Basic Info</h4>
+          <!-- <div class="form-inline"> -->
+            <div class="form-group">
+              <label for="first">First Name:</label>
+              <input type="text" class="form-control" id="first">
+            </div>
+            <div class="form-group">
+              <label for="last">Last Name:</label>
+              <input type="text" class="form-control" id="last">
+            </div>
+          <!-- </div> -->
+          <hr class="m-y-2"/>
+          <h4 class="m-b-2 text-info">Login Info</h4>
+          <div class="form-group">
+            <label for="user">Username:</label>
+            <input type="text" class="form-control" id="user" />
+          </div>
+          <div class="form-group">
+            <label for="mail">Email:</label>
+            <div class="input-group">
+              <span class="input-group-addon">@</span>
+              <input type="email" class="form-control" id="mail">
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" />
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remember Me
+            </label>
+          </div>
+
+        </form>
+      </div> <!-- / modal body -->
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+      </div> <!-- /modal footer -->
+    </div> <!-- /modal content -->
+  </div> <!-- /modal dialog -->
+</div> <!-- /modal -->
+<!-- =================
+        /Modal
+======================-->
