@@ -1,0 +1,219 @@
+/*========== General  ==========*/
+
+.display-1{
+  font-size: 72px;
+  margin-top: 3em;
+}
+.display-4{
+  font-size: 46px;
+  margin-bottom: 1em;
+}
+.m-b-1{
+  margin-bottom: 1em;
+}
+.m-b-2{
+  margin-bottom: 2em;
+}
+.m-b-4{
+  margin-bottom: 4em;
+}
+.m-t-2{
+  margin-top: 2em;
+}
+.m-t-1{
+  margin-top:1em;
+}
+.m-y-2{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.p-y-1{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.p-y-2{
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.p-y-4{
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.p-x-0{
+  padding-left: 0;
+  padding-right: 0;
+}
+/*buttons not rounded*/
+.btn-group button.btn, .btn-group a.btn, .no-round{
+  border-radius: 0;
+}
+/*section header color*/
+.sections-color{
+  color: #938c8c;
+}
+
+/*========== Navigation  ==========*/
+.navbar{
+  margin-bottom: 0;
+}
+.navbar-default{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+  background-color: #337ab7;
+  color: white;
+  border-radius: 3px;
+}
+
+/*========== jumbotron  ==========*/
+
+.jumbotron{
+  color: white;
+  height: 95vh;
+  background-color: rgb(109, 145, 163);
+  background: url('../img/backgrounds/330H.jpg') top right no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.jumbotron h1{
+  margin-top: 0;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+}
+.jumbotron p{
+  text-transform: capitalize;
+}
+.jumbotron .container{
+  background-color: rgba(217, 208, 208, 0.5);
+  padding-bottom: 1em;
+  border: 3px solid white;
+}
+
+
+/*========== about  ==========*/
+.about{
+
+}
+.concept{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#concept-about{
+  color: #e0a25c;
+  /*text-shadow: 1px 1px 4px #000000;*/
+}
+#concept-about ~ p{
+  /*color: #efad70;*/
+}
+#concept-tools{
+  color: #6baff1;
+  /*text-shadow: 1px 1px 4px #000000;*/
+}
+#concept-tools ~ p {
+  /*color: #5493d1;*/
+}
+#concept-articles{
+  color: #eb8c35;
+  /*text-shadow: 1px 1px 4px #000000;*/
+}
+article.concept .list-group a{
+  text-transform: capitalize;
+}
+
+/*========== languages  ==========*/
+.col-xs-10 .thumbnail .caption-fluid{
+  height: 135px;
+  overflow: auto;
+}
+.languages{
+  display: block;
+  position: relative;
+
+}
+.languages::after {
+  content: "";
+  background: url('../img/backgrounds/239H.jpg') no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index:-1;
+}
+
+
+/*========== schedule  ==========*/
+span.label{
+  float: right;
+  font-size: 1em;
+  width: 87px;
+}
+a.list-group-item:hover .list-group-item-text{
+  display: block;
+  padding-top: 0.5em;
+}
+
+/*========== signup footer  ==========*/
+.signup{
+  background-color: white;
+  border-top: firebrick solid 1px;
+  border-bottom: firebrick solid 1px;
+}
+
+/*========== footer  ==========*/
+
+footer div.container .nav li a{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/*========== media query  ==========*/
+@media(min-width: 768px) {
+  .concept{
+    height: 234px;
+  }
+  .concept h3{
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
+  .concept .list-group .list-group-item{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .list-group-item-text{
+    display: none;
+  }
+  section.signup h5{
+    text-align: left;
+  }
+  footer div.container .nav li a{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+}
+@media(min-width: 992px) {
+  .concept{
+    height: 303px;
+  }
+  .concept h3{
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .concept .list-group .list-group-item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+@media(min-width: 1200px) {
+  .concept{
+    height: 365px;
+  }
+}
