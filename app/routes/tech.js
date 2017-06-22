@@ -3,8 +3,8 @@ var router = express.Router();
 var pg = require('pg');
 var bodyParser = require('body-parser');
 
-router.get('/', function(request, response){
-  var alltech = [];
+router.get('/:tech',function(request,response){
+  var allresources = [];
   pg.connect('postgres://something:something@localhost/webdev', function(err, client, done){
     if(err){
       if(client){
@@ -12,14 +12,14 @@ router.get('/', function(request, response){
       }
       return;
     }else{
-      client.query(`SELECT * FROM tech`, function(err, result){
+      client.query(`SELECT * FROM resources where techid = (SELECT (techid) FROM tech where name = ${request.params.tech})`, function(err,result){
         if(err){
           return done(client);
         }else{
-          for(var i = 0; i < result.rows.length; i++){
-            alltech.push(result.rows[i]);
+          for(var i=0; i < result.rows.length;i++){
+            allresources.push(result.rows[i]);
           }
-          response.render('index', {alltech:alltech});
+          response.render('tech', {allresources:allresources});
           done();
           pg.end();
         }
