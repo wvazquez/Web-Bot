@@ -1,18 +1,20 @@
-var express = require('express');
-var router = express.Router();
+var router = require('express').Router();
 var pg = require('pg');
-var bodyParser = require('body-parser');
+var db = require('../config/db');
+var pool;
+
 
 router.get('/', function(request, response){
+  pool = new pg.Pool(db);
   var alltech = [];
-  pg.connect('postgres://something:something@localhost/webdev', function(err, client, done){
+  pool.connect(function(err, client, done){
     if(err){
       if(client){
         return done(client);
       }
       return;
     }else{
-      client.query(`SELECT * FROM tech`, function(err, result){
+      client.query(`SELECT * FROM technologies`, function(err, result){
         if(err){
           return done(client);
         }else{
@@ -20,12 +22,12 @@ router.get('/', function(request, response){
             alltech.push(result.rows[i]);
           }
           response.render('index', {alltech:alltech});
-          done();
-          pg.end();
         }
       });
+      done();
     }
   });
+  pool.end();
 });
 
 module.exports = router;
