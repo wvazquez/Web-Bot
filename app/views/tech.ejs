@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <% include partials/template/head.ejs %>
   </head>
   <body>
-    <h1>tech page</h1>
-    <ul>
-      <%= for(var i = 0; i<allresources.length; i++){%>
-        <li>allresources[i].title</li>
-      <%}%>
-    </ul>
+    <!-- navigation -->
+    <% include partials/content/navigation.ejs %>
   </body>
 </html>
