@@ -12,17 +12,21 @@
 
       <!-- resources -->
     <% for(var i = 0; i < allresources.length;i++){ %>
-      <article class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4">
+      <article class="col-xs-4 col-xs-offset-1 col-sm-offset-0 col-sm-3 ">
         <article class="thumbnail">
-          <a href='/<%=allresources[i].name%>'>
-          <img src='img/technologies/<%=allresources[i].img_src%>' alt= <%= allresources[i].title %> ></a>
-          <h3 class="text-center"> <%= allresources[i].name %> </h3>
-          <div class="caption caption-fluid">
+          <a target='_blank' href= <%=allresources[i].resource_url%> >
+          <img src='../img/technologies/<%=allresources[i].img_url%>' alt= <%= allresources[i].title %> ></a>
+          <h3 class="text-center"> <%= allresources[i].title %> </h3>
+          <div class="caption caption-fluid hidden-xs hidden-sm">
             <p> <%= allresources[i].description %> </p>
           </div>
         </article>
       </article>
     <%}%>
     </section> <!-- /row -->
+
+    <!-- footer -->
+      <% include partials/content/footer.ejs %>
+    <% include partials/template/scripts.ejs%>
   </body>
 </html>
