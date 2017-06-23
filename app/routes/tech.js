@@ -24,7 +24,8 @@ router.get('/tech/:tech',function(request,response){
           for(var i = 0; i < result.rows.length;i++){
             allresources.push(result.rows[i]);
           }
-          response.render('tech', {allresources:allresources});
+          response.render('tech', {allresources:allresources,
+                                    technology: request.params.tech});
         }
       });
       done();

@@ -1,5 +1,7 @@
 /*========== General  ==========*/
-
+body{
+  overflow-x: hidden;
+}
 .display-1{
   font-size: 72px;
   margin-top: 3em;
@@ -53,6 +55,7 @@
 }
 
 /*========== Navigation  ==========*/
+
 .navbar{
   margin-bottom: 0;
 }
@@ -60,7 +63,7 @@
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
   background-color: #337ab7;
   color: white;
   border-radius: 3px;
@@ -70,14 +73,21 @@
 
 .jumbotron{
   color: white;
-  height: 95vh;
   background-color: rgb(109, 145, 163);
-  background: url('../img/backgrounds/330H.jpg') top right no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.jumbotron_main{
+  height: 95vh;
+  background: url('../img/backgrounds/330H.jpg') top right no-repeat;
+  background-size: cover;
+}
+.jumbotron_resource{
+  height: 60vh;
+  background: url('../img/backgrounds/programmer.jpg') top right no-repeat;
+  background-size: cover;
 }
 .jumbotron h1{
   margin-top: 0;
@@ -95,9 +105,6 @@
 
 
 /*========== about  ==========*/
-.about{
-
-}
 .concept{
   display: flex;
   flex-direction: column;
@@ -137,8 +144,8 @@ article.concept .list-group a{
 }
 .languages::after {
   content: "";
-  background: url('../img/backgrounds/239H.jpg') no-repeat;
-  background-size: cover;
+  /*background: url('../img/backgrounds/239H.jpg') no-repeat;
+  background-size: cover;*/
   opacity: 0.2;
   top: 0;
   left: 0;
@@ -198,6 +205,11 @@ footer div.container .nav li a{
     padding-left: 15px;
   }
 
+}
+
+section.row{
+  display: flex;
+  flex-wrap: wrap;
 }
 @media(min-width: 992px) {
   .concept{

@@ -2,31 +2,37 @@
 <html>
   <head>
     <% include partials/template/head.ejs %>
+    <link rel="stylesheet" href="../css/card.css">
   </head>
   <body>
     <!-- navigation -->
     <% include partials/content/navigation.ejs %>
 
-    <section class="row">
+    <!-- jumbotron -->
+    <% include partials/content/jumbotron_resource.ejs %>
+
+    <!-- resources -->
+    <div class="row">
+      <div class="card-group">
+        <% for(var i = 0; i < allresources.length;i++){ %>
+          <div class="card">
+            <img height='200' width="250" class="card-img-top" src="../img/sites/<%=allresources[i].website_name%>.png" alt=<%= allresources[i].title %>>
+            <div class="card-block">
+              <h4 class="card-title"><%= allresources[i].title %></h4>
+              <p class="card-text hidden-xs hidden-sm"><%= allresources[i].description %></p>
+            </div>
+            <div class="card-footer">
+              <a target='_blank' href= <%=allresources[i].resource_url%> >Visit Page</a>
+            </div>
+        </div>
+        <%}%>
+      </div>
+  </div> <!-- /row -->
 
 
-      <!-- resources -->
-    <% for(var i = 0; i < allresources.length;i++){ %>
-      <article class="col-xs-4 col-xs-offset-1 col-sm-offset-0 col-sm-3 ">
-        <article class="thumbnail">
-          <a target='_blank' href= <%=allresources[i].resource_url%> >
-          <img src='../img/technologies/<%=allresources[i].img_url%>' alt= <%= allresources[i].title %> ></a>
-          <h3 class="text-center"> <%= allresources[i].title %> </h3>
-          <div class="caption caption-fluid hidden-xs hidden-sm">
-            <p> <%= allresources[i].description %> </p>
-          </div>
-        </article>
-      </article>
-    <%}%>
-    </section> <!-- /row -->
 
     <!-- footer -->
-      <% include partials/content/footer.ejs %>
+    <% include partials/content/footer.ejs %>
     <% include partials/template/scripts.ejs%>
   </body>
 </html>
