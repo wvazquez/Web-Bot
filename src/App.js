@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import TopicList from './TopicList';
-import Jumbotron from './Jumbotron';
-import Header from './Header';
-import AboutUs from './AboutUs';
-import Track from './Track';
-import Footer from './Footer';
-import Signup from './Signup';
-import Modal from './Modal';
+import TopicList from './components/Topics/TopicList';
+import Jumbotron from './components/Jumbotron';
+import Header from './components/Header';
+import AboutUs from './components/AboutUs';
+import Track from './components/Track';
+import Footer from './components/Footer';
+import Signup from './components/Signup';
+import Modal from './components/Modal';
 
 class App extends Component {
 
