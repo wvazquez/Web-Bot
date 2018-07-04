@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Modal = () =>
-  <div className="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div className="modal-dialog" role="document">
       <div className="modal-content">
         <div className="modal-header bg-primary">
@@ -14,22 +14,22 @@ const Modal = () =>
             <h4 className="m-b-2 text-info">Basic Info</h4>
 
               <div className="form-group">
-                <label for="first">First Name:</label>
+                <label htmlFor="first">First Name:</label>
                 <input type="text" className="form-control" id="first" />
               </div>
               <div className="form-group">
-                <label for="last">Last Name:</label>
+                <label htmlFor="last">Last Name:</label>
                 <input type="text" className="form-control" id="last" />
               </div>
 
             <hr className="m-y-2"/>
             <h4 className="m-b-2 text-info">Login Info</h4>
             <div className="form-group">
-              <label for="user">Username:</label>
+              <label htmlFor="user">Username:</label>
               <input type="text" className="form-control" id="user" />
             </div>
             <div className="form-group">
-              <label for="mail">Email:</label>
+              <label htmlFor="mail">Email:</label>
               <div className="input-group">
                 <span className="input-group-addon">@</span>
                 <input type="email" className="form-control" id="mail" />
@@ -37,7 +37,7 @@ const Modal = () =>
 
             </div>
             <div className="form-group">
-              <label for="password">Password:</label>
+              <label htmlFor="password">Password:</label>
               <input type="password" className="form-control" id="password" />
             </div>
 
