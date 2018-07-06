@@ -1,6 +1,7 @@
 import React from 'react';
 import Topic from './Topic';
-
+import { Link, Route, Redirect } from 'react-router-dom';
+import Course from './Course';
 
 
 class TopicList extends React.Component{
@@ -45,16 +46,27 @@ class TopicList extends React.Component{
           <section className="row">
             <article className="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4">
               {this.state.topics.map((topic, index) =>
-                <Topic key={index} topic={topic}/>
+                this.createTopic(index, topic)
               )}
             </article>
-
-
           </section>
           <hr />
         </div>
       </div>
     );
+  }
+
+  createTopic(key, topic){
+    return (
+      <div>
+        <Link to={`/courses/${topic.title}`} className="thumbnail">
+          <img src={topic.title + '.png'} alt={topic.title} />
+          <h3 className="text-center">{topic.title}</h3>
+          <div className="caption caption-fluid">
+            <p>{topic.title} {topic.description}</p>
+          </div>
+        </Link>
+      </div>);
   }
 }
 

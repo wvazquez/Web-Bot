@@ -7,6 +7,9 @@ import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import TopicList from './components/Topics/TopicList'
+import Course from './components/Topics/Course';
+
 
 class App extends Component {
 
@@ -16,6 +19,8 @@ class App extends Component {
         <div>
           <Header />
           <Route exact path='/' component={Home} />
+          <Route exact path='/courses' component={TopicList} />
+          <Route path='/courses/:course_name' component={Course} />
           <Footer />
         </div>
       </BrowserRouter>

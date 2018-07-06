@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () =>
   <header>
@@ -17,9 +17,9 @@ const Header = () =>
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav text-center">
-            <li id="this"><Link to="/">Home</Link></li>
+            <li id="this"><NavLink to="/">Home</NavLink></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#languages">Languages</a></li>
+            <li><NavLink to="/courses">Languages</NavLink></li>
             <li><a href="#schedule">Track</a></li>
 
           </ul>
