@@ -1,5 +1,5 @@
 import React from 'react';
-import TopicList from './Topics/TopicList';
+import CourseList from './Courses/CourseList';
 import Jumbotron from './Jumbotron';
 import AboutUs from './AboutUs';
 import Track from './Track';
@@ -10,7 +10,7 @@ const Home = () =>
 <div>
   <Jumbotron />
   <AboutUs />
-  <TopicList />
+  <CourseList />
   <Track />
   <Signup />
   <Modal />

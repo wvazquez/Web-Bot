@@ -1,10 +1,9 @@
 import React from 'react';
-import Topic from './Topic';
 import { Link, Route, Redirect } from 'react-router-dom';
 import Course from './Course';
 
 
-class TopicList extends React.Component{
+class CourseList extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -46,7 +45,7 @@ class TopicList extends React.Component{
           <section className="row">
             <article className="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4">
               {this.state.topics.map((topic, index) =>
-                this.createTopic(index, topic)
+                this.createCourse(index, topic)
               )}
             </article>
           </section>
@@ -56,19 +55,17 @@ class TopicList extends React.Component{
     );
   }
 
-  createTopic(key, topic){
+  createCourse(key, topic){
     return (
-      <div>
-        <Link to={`/courses/${topic.title}`} className="thumbnail">
+        <Link key={key} to={`/courses/${topic.title}`} className="thumbnail">
           <img src={topic.title + '.png'} alt={topic.title} />
           <h3 className="text-center">{topic.title}</h3>
           <div className="caption caption-fluid">
             <p>{topic.title} {topic.description}</p>
           </div>
-        </Link>
-      </div>);
+        </Link>);
   }
 }
 
 
-export default TopicList;
+export default CourseList;
