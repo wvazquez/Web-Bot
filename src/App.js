@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
-import CourseList from './components/Courses/CourseList'
+import CourseContainer from './components/Courses/CourseContainer'
 import Course from './components/Courses/Course';
 
 
@@ -18,9 +19,9 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Header />
-          <Route exact path='/' component={Home} />
-          <Route exact path='/courses' component={CourseList} />
-          <Route path='/courses/:course_name' component={Course} />
+
+            <Route exact path='/' component={Home} />
+            <Route path='/courses' component={CourseContainer} />
           <Footer />
         </div>
       </BrowserRouter>
