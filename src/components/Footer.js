@@ -1,20 +1,36 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-const Footer = () =>
+const Footer = () => {
+
+ let footerList = [
+   "HTML5",
+   "CSS3",
+   "Javascript",
+   "Bootstrap",
+   "jQuery",
+   "Git"
+ ];
+  return(
   <footer>
       <div className="container">
         <section className="row p-y-1">
           <ul className="nav nav-pills navbar-left">
-            <li role="presentation"><a href="#">HTML</a></li>
-            <li role="presentation"><a href="#">CSS</a></li>
-            <li role="presentation"><a href="#">Javascript</a></li>
-            <li role="presentation"><a href="#">Bootstrap</a></li>
-            <li role="presentation"><a href="#">jQuery</a></li>
-            <li role="presentation"><a href="#">Git</a></li>
+
+          { footerList.map((footerItem, index) => {
+              return(
+              <li key={index} role="presentation">
+                <Link to={`/courses/${footerItem}`}>{footerItem}</Link>
+              </li>
+            )})
+          }
+
+
           </ul>
           <p className="navbar-text navbar-right hidden-xs">All Rights Reserved 2016</p>
         </section>
       </div>
-  </footer>;
+  </footer>);
+};
 
   export default Footer;
