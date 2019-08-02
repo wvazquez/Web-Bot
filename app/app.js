@@ -13,7 +13,7 @@ app.use(require('./routes/admin'));
 app.set('view engine', 'ejs');
 app.set('views','app/views');
 
-
-app.listen(3030,function(){
-  console.log('listening on port 3030');
+const PORT = process.env.PORT || 3030;
+app.listen(PORT,function(){
+  console.log('listening on PORT: ' + PORT);
 });
